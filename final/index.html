@@ -1,0 +1,473 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS Image Compression demo - ExamsMyantra</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+	.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.start{
+height:30px;
+width:100px;
+background-color:black;
+padding:8px 50px;
+opacity:.7;
+font-size:25px;
+font-family:sans;
+color:white;
+text-decoration:none;
+}
+.bg{
+background-color:#80cbc4;}
+.second{
+margin-top:2%;
+height:200px;
+width:100%;
+background-image:url('s2.jpg');
+  background-repeat: no-repeat;
+   background-size: 80% 100%;
+}
+.margin1{
+margin-top:7%;
+}
+.marleft{
+margin-left:2%;
+}
+.feature{
+background-image:url('mobile_img.png');
+height:100%;
+width:100%;
+margin-top:5%;
+  background-repeat: no-repeat;
+   background-size: 80% 100%;
+}
+
+body{
+text-decoration:none;}
+.edit1{
+
+}
+.content{
+height:100%;
+
+width:51%;
+float:left;}
+.edit1{
+float:left;
+margin-left:3%;
+}
+.content1{
+height:100%;
+
+width:40%;
+margin-left:50%;
+}
+.bg1{
+background-color:white;
+border-radius:50%;
+height:40px;
+text-align:center;
+width:40px;
+padding-top:6px;
+}
+.mar{
+margin-top:4px;
+}
+ a{
+color:black;
+}
+.footer1{
+background-image:url('img10.jpg');
+height:30%;
+width:100%;
+
+  background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+.bg2{
+background-color:red;}
+.f1
+{
+height:500px;
+width:51%;
+margin-top:40px;
+padding-right:40px;
+float:left;
+}
+.f2
+{
+height:auto;
+width:51%;
+margin-top:40px;
+padding-right:40px;
+
+}
+.c1{
+margin-top:20px;
+
+background-color:white;
+}
+.im{
+float:left;}
+.color{
+color:#bf360c;
+font-family:sans;
+}
+.c123{
+margin-top:720px;
+background-color:white;
+
+}
+.im{
+float:left;}
+.color{
+color:#bf360c;
+font-family:sans;
+
+}
+.how1{
+margin-left:35%;
+height:200px;
+width:60%;
+margin-top:20%;
+}
+.how{
+margin-left:35%;
+height:150px;
+width:50%;
+padding-top:20px;}
+.h4{
+font-family:sans;
+color:#bf360c;
+margin-top:40px;
+margin-left:20px;
+}
+.h41{
+font-family:sans;}
+.g{
+background-color:red;}
+</style>
+</head>
+<body>
+
+<div class="row" style="margin-right:15px;">
+    <div class="col-md-9 col-lg-9 ">
+	 <div class="login_image"></div>
+	 
+	 <div class="login_qoute justify-content-lg-center">
+	 <span class="logo" style="margin-bottom:10px;"> 
+	<span style="font-size:120px;">P</span>hotoshop
+	</span>
+	<h1> <br><span style="font-size:50px;margin-bottom:40px;margin-top:30px;">"A</span> Photoshop is an art, and you can do a lot with it. Change the atmosphere through different lighting and make the pictures look more interesting."</h1>
+	 </div>
+	</div>
+    <div class="col-md-3 col-lg-3">
+	  
+        <div class="card">
+            <div class="login-box">
+                <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+                    <div class="login-space">
+                        <div class="login">
+						<form id="logform">
+                            <div class="group"> <label for="user" class="label" >Email</label> <input id="user" name="uname" type="text" class="input" placeholder="Enter your Email"> </div>
+                            <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" name="pass" class="input" data-type="password" placeholder="Enter your password"> </div>
+                            
+                            <div class="group"> <input type="submit" id="log-button" class="button" value="Sign In"> </div>
+                            <div class="hr"></div>
+                           
+						</form>
+                        </div>
+                        <div class="sign-up-form" >
+						   <form id="addform">
+                            <div class="group"> <label for="user" class="label">Username</label> <input id="user" name="name" type="text" class="input" placeholder="Create your Username" required> </div>
+                            <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" name ="pass"type="password" class="input" data-type="password" placeholder="Create your password" required> </div>
+                            
+                            <div class="group"> <label for="pass" class="label">Email Address</label> <input id="pass" name="email" type="mail" class="input" placeholder="Enter your email address" required> </div>
+                            <div class="group"> <input type="submit"  id="save-button" class="button" value="Sign Up"> </div>
+                            <div class="hr"></div>
+							
+                           </form>
+                        </div>
+						
+                    </div>
+					<div style="margin-top:50px;padding-left:0px;text-align: center;">
+					<p id="success" style="color:green;font-size:15px;"></p>
+					<p id="error" style="color:red;font-size:12px;"></p>
+					</div>
+                </div>
+				
+            </div>
+			
+        </div>
+    </div>
+</div>
+
+<div class="c123">
+<div class="second">
+</div>
+<div class="f1">
+<i class="fas fa-magic" style="font-size:50px;margin-left:20%;margin-top:20%;">
+<h1 class="color">SMART FUNCTION</h1>
+</i>
+<p style="margin-left:20%;">Say goodbye to boring and repetitive editing tasks with AI design tools. One click is all it takes to remove backgrounds perfectly from your photos, cut out every strand of hair and more! Let AI and Machine Learning take your photo editing and background removal to a new level!</p>
+</div>
+<div  ><img src="edit_photo1.jpeg" class="img-fluid" style="height:70%; width:49%; margin-top:5%;"></div>
+</div>
+<div class="c1">
+<div  ><img src="editor.png" class="img-fluid" style="height:70%; width:49%; margin-top:5%; margin-left:5%"></div>
+<div class="f1" style="margin-left:50%; margin-top:-30%;">
+
+<i class="fas fa-pen-square" style="font-size:50px;margin-left:20%;margin-top:20%;">
+<h1 class="color">EASY TO UNDERSTAND</h1>
+</i>
+<p style="margin-left:20%;">Say goodbye to boring and repetitive editing tasks with AI design tools. One click is all it takes to remove backgrounds perfectly from your photos, cut out every strand of hair and more! Let AI and Machine Learning take your photo editing and background removal to a new level!</p>
+</div>
+</div>
+
+
+<div class="c1">
+<div class="f1">
+
+<i class="fas fa-layer-group" style="font-size:50px;margin-left:20%;margin-top:20%;">
+<h1 class="color">RELIABLE</h1>
+</i>
+<p style="margin-left:20%;">Say goodbye to boring and repetitive editing tasks with AI design tools. One click is all it takes to remove backgrounds perfectly from your photos, cut out every strand of hair and more! Let AI and Machine Learning take your photo editing and background removal to a new level!</p>
+</div>
+<div  ><img src="editor2.png" class="img-fluid" style="height:70%; width:49%;"></div>
+</div>
+
+<div class="feature">
+<div class="how"><h4 class="h4">"The harder you work for something, the greater you'll feel when you achieve it."</h4></div>
+
+
+
+
+</div>
+<div class="footer1">
+
+</div>
+<footer class="page-footer font-small bg pt-4">
+
+  <div class="container text-center text-md-left">
+
+    <div class="row text-center text-md-left mt-3 pb-3">
+>
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+      </div>
+
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+        <p>
+          <a>Edit Image</a>
+        </p>
+		<p>
+          <a>Crop Image</a>
+        </p>
+        <p>
+          <a>Compress Image</a>
+        </p>
+      
+      </div>
+
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+        <p>
+          <i class="fas fa-home mr-3"></i> Ahemdabad Gujrat, India</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row d-flex align-items-center">
+
+      <div class="col-md-7 col-lg-8">
+
+        <p class="text-center text-md-left">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/">
+            <strong> ImageX.com</strong>
+          </a>
+        </p>
+
+      </div>
+
+      <div class="col-md-5 col-lg-4 ml-lg-0">
+
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item bg1">
+              <a href="#"class="btn-floating btn-md rgba-white-slight  btn ">
+                <i class="fab fa-facebook-f "style=""></i>
+              </a>
+            </li>
+            <li class="list-inline-item bg1">
+              <a href="#" class="btn-floating btn-md btn  ">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item bg1">
+              <a  href="#" class="btn-floating btn-md btn rgba-white-slight ">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li class="list-inline-item bg1">
+              <a  href="#" class="btn-floating btn-md btn rgba-white-slight ">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+function message(message , status)
+{
+   if(status == true)
+   {
+   $("#success").html(message).slideDown();
+   $("#error").slideUp();
+   setTimeout(function(){
+   $("#success").slideUp();
+   },4000);
+   }
+   else
+   {
+	  $("#success").slideUp();
+      $("#error").html(message).slideDown();
+	  setTimeout(function(){
+      $("#error").slideUp();
+      },4000);
+   }
+}
+$(document).ready(function()
+{
+console.log("ready");
+});
+$("#save-button").on("click",function(e){
+  console.log("test");
+  e.preventDefault();
+  
+  var arr =$("#addform").serializeArray();
+  //console.log(arr);
+  var obj={};
+  var st=true;
+  for(var a=0;a < arr.length;a++)
+  {
+   obj[arr[a].name]=arr[a].value;
+   if(arr[a].value == "")
+   { 
+st=false;
+   }
+  }
+  if(st == true){
+  var json=JSON.stringify(obj);
+  //console.log(json);
+  //console.log(obj);
+  $.ajax({
+  url : 'http://localhost/minor/insert_api.php',
+  type : "POST",
+  data : json,
+  success :  function(data)
+  {
+  message(data.message, data.status);
+  if(data.status == true)
+  {
+   $("#addform").trigger("reset");
+  }
+  }
+  });
+  }
+  else
+   message("All Fields are required !", false);
+  
+  });
+ $("#log-button").on("click",function(e){ 
+ console.log("don");
+ e.preventDefault();
+  var arr =$("#logform").serializeArray();
+  //console.log(arr);
+  var obj={};
+  var st=true;
+  for(var a=0;a < arr.length;a++)
+  {
+   obj[arr[a].name]=arr[a].value;
+   if(arr[a].value == "")
+   { 
+st=false;
+   }
+  }
+   if(st == true){
+  var json=JSON.stringify(obj);
+  $.ajax({
+  url : 'http://localhost/minor/login_api.php',
+  type : "POST",
+  data : json,
+  success :  function(data)
+  {
+  message(data.message, data.status);
+  console.log("enter login");
+  if(data.status == true)
+  {
+   $("#logform").trigger("reset");
+    var url="?name="+ encodeURIComponent(data.user);
+    
+    window.location.href = "file:///C:/Users/kiran/Desktop/final/editor.html"+url;
+  }
+  }
+  });
+  }
+  else
+   message("All Fields are required !", false);
+ 
+ 
+ });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<html lang="en">
+<head>
+  <title>Cropper.js</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="cropper.css">
+  <link rel="stylesheet" href="crop.css">
+  <script>
+	function hidemenu(){
+	document.getElementById("id").style.display="block";
+	document.getElementById("id").style.backgroundColor="black";
+	document.getElementById("id4").style.display="none";
+	document.getElementById("id3").style.display="none";
+	document.getElementById("id2").style.display="none";
+	document.getElementById("id1").style.display="none";
+	}
+	function adjust(){
+	document.getElementById("id1").style.backgroundColor="rgb(20,20,20)";
+	document.getElementById("id3").style.display="none";
+	document.getElementById("id4").style.display="none";
+	document.getElementById("id").style.display="none";
+	document.getElementById("id2").style.display="none";
+	document.getElementById("id1").style.display="block";
+	}
+	function rotate(){
+	document.getElementById("id2").style.backgroundColor="rgb(20,20,20)";
+	document.getElementById("id1").style.display="none";
+	document.getElementById("id4").style.display="none";
+	document.getElementById("id").style.display="none";
+	document.getElementById("id3").style.display="none";
+	document.getElementById("id2").style.display="block";
+	}
+	function zoom(){
+	document.getElementById("id3").style.backgroundColor="rgb(20,20,20)";
+	document.getElementById("id1").style.display="none";
+	document.getElementById("id4").style.display="none";
+	document.getElementById("id").style.display="none";
+	document.getElementById("id2").style.display="none";
+	document.getElementById("id3").style.display="block";
+	}
+    function flip(){
+	document.getElementById("id4").style.backgroundColor="rgb(20,20,20)";
+	document.getElementById("id3").style.display="none";
+	document.getElementById("id2").style.display="none";
+	document.getElementById("id").style.display="none";
+	document.getElementById("id1").style.display="none";
+	document.getElementById("id4").style.display="block";
+	}
+  </script>
+</head>
+
+<body>
+<div>
+	<nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color:rgb(40,40,40);color:white" >
+  <div class="container" style="height:45px;font-size:70%;">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto" style="font-size:50%; margin-top:-1%;">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html" style="font-size:70%;color:white;">
+              </a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="editor.html" style="font-size:70%; color:white;" id="editurl">Edit Image</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="crop.html" style="font-size:70%;color:rgb(100,100,100);" id="cropurl">Crop Image</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="comp_prc.html" style="font-size:70%;color:white;" id="comurl">Compress Image</a>
+        </li>
+	    <li class="nav-item">
+          <a class="nav-link" href="" style="font-size:70%;color:white;margin-left:150px;"><i class="fas fa-user-circle" style="font-size:25px;float:left"></i><span id="username" style="margin-left:10px;margin-top:-20px;">Username</span></a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="file:///C:/Users/kiran/Desktop/final/index.html" style="font-size:70%;color:white">Logout</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<div id ="actions">
+	<div class="docs-buttons">
+	<div class="first">
+		<div class="one">
+		<ul>
+			
+			<li style="margin-top:100px; ">
+			<div class="f">
+				<label class="btn-upload" for="inputImage" title="Upload image file">
+					<input type="file" class="sr-only" id="inputImage" name="file" accept="image/*">
+					<i class="fa fa-upload" style="font-size:80%;"></i>
+				</label>
+				<div class="dropdown-content1">
+					<p style="margin-top:9px;">UPLOAD IMAGE</p>
+				</div>
+			</div>
+			</li>
+			
+			<li>
+				<div class="f"><button onclick="adjust()" style="display:none" id="b4"></button><label for="b4"><i style="cursor:pointer; font-size:90%;" class="fa fa-arrows-alt"></i></label>
+					<div class="dropdown-content3">
+						<img height="150px" width="250px" src="back4.jpg">
+						<label>ARRANGE</label>
+						<p Style="font-size:16px; margin-top:-5px;">Move, Transfer and change layer setting of image. </p>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="f"><button onclick="rotate()" style="display:none" id="b5"></button><label for="b5"><i  style="cursor:pointer; font-size:80%;" class="fa fa-redo-alt"></i></label>
+					<div class="dropdown-content3">
+						<img height="150px" width="250px" src="rotate.jpeg">
+						<label>ROTATE</label>
+						<p Style="font-size:16px; margin-top:-5px;"> Allows to turn image in a clockwise or counterclockwise direction.</p>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="f"><button onclick="zoom()" style="display:none" id="b6"></button><label for="b6"><i style="cursor:pointer; font-size:80%;"  class="fa fa-search-plus"></i></label>
+					<div class="dropdown-content4">
+						<img height="150px" width="250px" src="zoom.jpeg">
+						<label>ZOOM</label>
+						<p style="font-size:16px; margin-top:-5px;">Increase or decrease height and width of image respectively.</p>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="f"><button onclick="flip()" style="display:none" id="b7"></button><label for="b7"><i style="cursor:pointer; font-size:90%;"  class="fa fa-arrows-alt-v"></i></label>
+					<div class="dropdown-content2">
+						<img height="150px" width="250px" src="flip.jpeg">
+						<label>FLIP</label>
+						<p style="font-size:16px; margin-top:-5px;">Generate mirror-reversal of image across horizontal or vertical axis.</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		</div>
+		<div class="two" id="id" style="display:none;">
+		</div>
+		<div class="two" id="id1">
+			<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+			</button>
+			<img src="c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+			<label class="effect_name1" >ARRANGE</label>
+			<br>
+			<label style="margin-left:3%;margin-top:15%;font-family: Open Sans;font-size:12px;color:rgb(150,150,150);">Canvas</label><br>
+			<button type="button" class="z3" data-method="crop" title="Crop">
+				CROP&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z2" data-method="clear" title="Clear">
+				CLEAR&nbsp;&nbsp;<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+			<label style="margin-left:5%;margin-top:15%;font-family: Open Sans;font-size:12px;color:rgb(150,150,150);">Arrange</label><br>
+			<button type="button" class="z1" data-method="move" data-option="-10" data-second-option="0" title="Move Left">
+				SHIFT&nbsp;&nbsp;<i class="fa fa-arrow-left" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z1" data-method="move" data-option="10" data-second-option="0" title="Move Right">
+				SHIFT&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z1" data-method="move" data-option="0" data-second-option="-10" title="Move Up">
+				SHIFT&nbsp;&nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z1" data-method="move" data-option="0" data-second-option="10" title="Move Down">
+				SHIFT&nbsp;&nbsp;<i class="fa fa-arrow-down" aria-hidden="true"></i>
+			</button>
+			
+			<button class="btn52" onclick="hidemenu()" style="margin-left:20px; margin-top:40px;">CLOSE</button>
+			<button class="btn51">APPLY</button>
+		</div>
+		<div class="two" id="id2" style="display:none;">
+			<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+			</button>
+			<img src="c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+			<label class="effect_name" >ROTATE</label>
+			<br>
+			<label style="margin-left:5%;margin-top:15%;font-family: Open Sans;font-size:12px;color:rgb(150,150,150);">Canvas</label><br>
+			<button type="button" class="z3" data-method="crop" title="Crop">
+				CROP&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z2" data-method="clear" title="Clear">
+				CLEAR&nbsp;&nbsp;<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+			<label style="margin-left:5%;margin-top:15%;font-family: Open Sans;font-size:12px;color:rgb(150,150,150);">Roatate</label><br>
+			<button type="button" class="z1" data-method="rotate" data-option="-45" title="Rotate Left">
+				ROTATE&nbsp;&nbsp;<i class="fa fa-undo-alt" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z1" data-method="rotate" data-option="45" title="Rotate Right">
+				ROTATE&nbsp;&nbsp;<i class="fa fa-redo-alt" aria-hidden="true"></i>
+			</button>
+			
+			<button class="btn52" onclick="hidemenu()" style="margin-left:20px; margin-top:130px;">CLOSE</button>
+			<button class="btn51">APPLY</button>
+		</div>
+		<div class="two" id="id3" style="display:none;">
+			<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+			</button>
+			<img src="c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+			<label class="effect_name" >ZOOM</label>
+			<br>
+			<label style="margin-left:5%;margin-top:15%;font-family: Open Sans;font-size:12px;color:rgb(150,150,150);">Canvas</label>
+			<br>
+			<button type="button" class="z3" data-method="crop" title="Crop">
+				CROP&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z2" data-method="clear" title="Clear">
+				CLEAR&nbsp;&nbsp;<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+			<label style="margin-left:5%;margin-top:15%;font-family: Open Sans;font-size:12px;color:rgb(150,150,150);">Zoom</label><br>
+			<button type="button" class="z1" data-method="zoom" data-option="0.1" title="Zoom In">
+				ZOOM&nbsp;&nbsp;<i class="fa fa-search-plus" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z1" data-method="zoom" data-option="-0.1" title="Zoom Out">
+				ZOOM&nbsp;&nbsp;<i class="fa fa-search-minus" aria-hidden="true"></i>
+			</button>
+			
+			<button class="btn52" onclick="hidemenu()" style="margin-left:20px; margin-top:130px;">CLOSE</button>
+			<button class="btn51">APPLY</button>
+		</div>
+		<div class="two" id="id4" style="display:none;">
+			<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+			</button>
+			<img src="c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+			<label class="effect_name2" >FLIP</label>
+			<br>
+			<label style="margin-left:5%;margin-top:15%;font-family: Open Sans;font-size:12px;color:rgb(150,150,150);">Canvas</label><br>
+			<button type="button" class="z3" data-method="crop" title="Crop">
+				CROP&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z2" data-method="clear" title="Clear">
+				CLEAR&nbsp;&nbsp;<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+			<label style="margin-left:5%;margin-top:15%;font-family: Open Sans;font-size:12px;color:rgb(150,150,150);">Flip</label><br>
+			<button type="button" class="z1" data-method="scaleX" data-option="-1" title="Flip Horizontal">
+				FLIP&nbsp;&nbsp;<i class="fa fa-arrows-alt-h" aria-hidden="true"></i>
+			</button>
+			<button type="button" class="z1" data-method="scaleY" data-option="-1" title="Flip Vertical">
+				FLIP&nbsp;&nbsp;<i class="fa fa-arrows-alt-v" aria-hidden="true"></i>
+			</button>
+			
+			<button class="btn52" onclick="hidemenu()" style="margin-left:20px; margin-top:130px;">CLOSE</button>
+			<button class="btn51">APPLY</button>
+		</div>
+		<div class="col-md-12 docs-toggles">
+			<div class="dropdown dropup docs-options">
+				<ul class="dropdown-menu" role="menu" aria-labelledby="toggleOptions">
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="responsive" type="checkbox" name="responsive" checked>
+							<label class="form-check-label" for="responsive">responsive</label>
+						</div>
+					</li>
+		
+					<li class="dropdown-item"> 
+						<div class="form-check">
+							<input class="form-check-input" id="restore" type="checkbox" name="restore" checked>
+							<label class="form-check-label" for="restore">restore</label>
+						</div>
+					</li>
+			
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="checkCrossOrigin" type="checkbox" name="checkCrossOrigin" checked>
+							<label class="form-check-label" for="checkCrossOrigin">checkCrossOrigin</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="checkOrientation" type="checkbox" name="checkOrientation" checked>
+							<label class="form-check-label" for="checkOrientation">checkOrientation</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="modal" type="checkbox" name="modal" checked>
+							<label class="form-check-label" for="modal">modal</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="guides" type="checkbox" name="guides" checked>
+							<label class="form-check-label" for="guides">guides</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="center" type="checkbox" name="center" checked>
+							<label class="form-check-label" for="center">center</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="highlight" type="checkbox" name="highlight" checked>
+							<label class="form-check-label" for="highlight">highlight</label>
+						</div>
+					</li>
+            
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="autoCrop" type="checkbox" name="autoCrop" checked>
+							<label class="form-check-label" for="autoCrop">autoCrop</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="movable" type="checkbox" name="movable" checked>
+							<label class="form-check-label" for="movable">movable</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="rotatable" type="checkbox" name="rotatable" checked>
+							<label class="form-check-label" for="rotatable">rotatable</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="scalable" type="checkbox" name="scalable" checked>
+							<label class="form-check-label" for="scalable">scalable</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="zoomable" type="checkbox" name="zoomable" checked>
+							<label class="form-check-label" for="zoomable">zoomable</label>
+						</div>
+					</li>
+							
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="zoomOnTouch" type="checkbox" name="zoomOnTouch" checked>
+							<label class="form-check-label" for="zoomOnTouch">zoomOnTouch</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="zoomOnWheel" type="checkbox" name="zoomOnWheel" checked>
+							<label class="form-check-label" for="zoomOnWheel">zoomOnWheel</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="cropBoxMovable" type="checkbox" name="cropBoxMovable" checked>
+							<label class="form-check-label" for="cropBoxMovable">cropBoxMovable</label>
+						</div>
+					</li>
+									
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="cropBoxResizable" type="checkbox" name="cropBoxResizable" checked>
+							<label class="form-check-label" for="cropBoxResizable">cropBoxResizable</label>
+						</div>
+					</li>
+											
+					<li class="dropdown-item">
+						<div class="form-check">
+							<input class="form-check-input" id="toggleDragModeOnDblclick" type="checkbox" name="toggleDragModeOnDblclick" checked>
+							<label class="form-check-label" for="toggleDragModeOnDblclick">toggleDragModeOnDblclick</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="three">
+			<div class="docs-demo" style="display:none" id="div32">
+
+				<div class="img-container">
+					<img src="black.png" alt="Picture">
+				</div>
+			</div>
+			<div class="d-flex justify-content-center align-items-center">
+			<div color="white" style="border:2px dashed rgb(100,100,100);height:50%;width:50%;border-radius:2%;margin-top:23%" color="white" id="div21">
+			
+			<input type="file" style="color:white;background-color:transparent;display:none;" class="sr-only" id="inputImage" onchange="showPreview()">
+			<label for="inputImage" style="color:rgb(200,200,200);font-size:100px;margin-left:34%;margin-top:15%;" >
+			<i class="fas fa-upload" style="cursor:pointer;"></i></label>
+            <h4 style="color:white;margin-left:25%">UPLOAD IMAGE</h4>
+			</div>
+			</div>
+		</div>
+		<div class="four">
+			<div class="pqr">
+				<div class="img-preview preview-lg" id="div23"></div>
+				<br>
+				<div class="pre"><b>Image-Preview</b></div>
+			</div>
+		
+			<div class="menu2">
+				<div class="def">Ratio Of Crop Size</div>
+			</div>				
+				
+			<div class="menu3">
+				<div class="menu1">
+					<button class="z" id="ra1"  >1:1</button>
+					<button class="z" id="ra4"  >3:2</button>
+					<br>
+					<button class="z" id="ra3"  >4:3</button>
+					<button class="z" id="ra6"  >5:4</button>
+					<br>
+					<button class="z" id="ra2"  >3.5:4.5</button>
+					<button class="z" id="ra5"  >Default</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="second">
+		<div class="dow">
+			<button class="res-btn" data-method="reset">
+				<i class="fa fa-sync-alt" aria-hidden="true" style="margin-left:-60px; margin-top:8px; font-size:20px;" ></i>&nbsp;&nbsp;&nbsp;<p style="margin-top:-30px; margin-left:30px; font-size:20px;">RESET</p>
+			</button>
+			
+			<button class="dow-btn" data-method="getCroppedCanvas">
+				<i class="fa fa-download" style="margin-left:-70px; margin-top:8px; font-size:20px;" ></i>
+				<span class="docs-tooltip" data-toggle="tooltip">
+					<p style="margin-top:-26px; margin-left:20px; font-size:20px;">SAVE</p>
+				</span>
+			</button>
+		</div>
+		<div class="modal fade docs-cropped" id="getCroppedCanvasModal" role="dialog" aria-hidden="true" aria-labelledby="getCroppedCanvasTitle" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="getCroppedCanvasTitle">Cropped Image</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+						<a class="btn btn-dark" id="download" href="javascript:void(0);" download="cropped.jpg">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://fengyuanchen.github.io/shared/google-analytics.js" crossorigin="anonymous"></script>
+<script src="cropper.js"></script>
+<script src="crop.js"></script>
+<script>
+	  var queryString = new Array();
+    
+	 console.log("tes");
+        if (queryString.length == 0) {
+            if (window.location.search.split('?').length > 1) {
+                var params = window.location.search.split('?')[1].split('&');
+                for (var i = 0; i < params.length; i++) {
+                    var key = params[i].split('=')[0];
+                    var value = decodeURIComponent(params[i].split('=')[1]);
+                    queryString[key] = value;
+                }
+            }
+        }
+        if (queryString["name"] != null) {
+          
+            data =  queryString["name"] ;
+            document.getElementById("username").innerHTML = data;
+			username=data;
+			var url="?name="+ encodeURIComponent(username);
+	          $("#editurl").attr("href","file:///C:/Users/kiran/Desktop/final/editor.html"+url );
+			    $("#comurl").attr("href","file:///C:/Users/kiran/Desktop/final/comp_prc.html"+url );
+				  $("#cropurl").attr("href","file:///C:/Users/kiran/Desktop/final/crop.html"+url );
+			  
+        }
+		
+		
+		
+ 
+	</script>
+</body>
+
+</html>
